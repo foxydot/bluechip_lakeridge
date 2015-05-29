@@ -6536,7 +6536,7 @@ Site Navigation
   padding: 0;
 }
 .nav-primary li.menu-item a {
-  padding: 1rem 2.5rem;
+  padding: 1rem 2.3rem;
   color: #f2f7fa;
   border-bottom: 6px solid transparent;
   text-transform: uppercase;
@@ -6574,6 +6574,13 @@ Site Navigation
 .nav-primary li.menu-item .sub-menu li:hover > a {
   color: #959595;
   text-decoration: none;
+}
+.nav-primary li.menu-item.menu-item-has-children > a:after {
+  font-family: FontAwesome;
+  content: '\f0d7';
+  color: #f16528;
+  display: inline-block;
+  margin-left: 1rem;
 }
 .nav-primary li.separator {
   color: #0f6bae;
