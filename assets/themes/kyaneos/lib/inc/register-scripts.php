@@ -9,7 +9,7 @@ function msdlab_add_styles() {
     global $is_IE;
     if(!is_admin()){
         //use cdn        
-            wp_enqueue_style('bootstrap-style','//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css');
+            wp_enqueue_style('bootstrap-style','//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css');
             wp_enqueue_style('font-awesome-style','//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css',array('bootstrap-style'));
         //use local
            // wp_enqueue_style('bootstrap-style',get_stylesheet_directory_uri().'/lib/bootstrap/css/bootstrap.css');
@@ -30,8 +30,6 @@ function msdlab_add_styles() {
             global $wp_styles;
             $wp_styles->add_data( 'ie8-style', 'conditional', 'lte IE 8' );
         }    
-    } else {
-        wp_enqueue_style('kyaneos-admin',get_template_directory_uri() . '/lib/css/admin.css');
     }
 }
 
@@ -39,7 +37,7 @@ function msdlab_add_scripts() {
     global $is_IE;
     if(!is_admin()){
         //use cdn
-            wp_enqueue_script('bootstrap-jquery','//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js',array('jquery'));
+            wp_enqueue_script('bootstrap-jquery','//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js',array('jquery'));
         //use local
             //wp_enqueue_script('bootstrap-jquery',get_stylesheet_directory_uri().'/lib/bootstrap/js/bootstrap.min.js',array('jquery'));
         wp_enqueue_script('msd-jquery',get_stylesheet_directory_uri().'/lib/js/theme-jquery.js',array('jquery','bootstrap-jquery'));
