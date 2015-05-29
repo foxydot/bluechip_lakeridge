@@ -8,7 +8,7 @@
     .odd {background: #fff;}
     .file input[type="text"] {width: 75%}
 </style>
-<div class="my_meta_control">
+<div class="msdlab_meta_control">
     <h4>Other Documents</h4>
 
     <div class="table">

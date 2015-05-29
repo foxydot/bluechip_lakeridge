@@ -1,5 +1,5 @@
 <?php global $wpalchemy_media_access; ?>
-<div class="my_meta_control">
+<div class="msdlab_meta_control">
  <p id="warning" style="display: none;background:lightYellow;border:1px solid #E6DB55;padding:5px;">Order has changed. Please click Save or Update to preserve order.</p>
 
     <h4>Event Date</h4>  

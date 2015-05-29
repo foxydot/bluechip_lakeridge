@@ -1,4 +1,4 @@
-<ul class="location_meta_control">
+<ul class="msdlab_meta_control">
 <?php while($mb->have_fields('client',1)): ?>
     <li>
     <?php $metabox->the_field('name'); ?>

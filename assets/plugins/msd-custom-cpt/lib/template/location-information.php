@@ -56,7 +56,7 @@ $states = array('AL'=>"Alabama",
 
 
 ?>
-<ul class="location_meta_control">
+<ul class="msdlab_meta_control">
 <?php while($mb->have_fields('address',1)): ?>
 	<li>
     <?php $metabox->the_field('street'); ?>
