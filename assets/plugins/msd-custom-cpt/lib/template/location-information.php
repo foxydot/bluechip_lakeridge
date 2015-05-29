@@ -85,11 +85,26 @@ $states = array('AL'=>"Alabama",
 	</select>
 	</div>
 	</li>
-	<li>
+    <li>
     <?php $metabox->the_field('zip'); ?>
-	<label id="<?php $metabox->the_name(); ?>_label" for="<?php $metabox->the_name(); ?>">Zip Code</label>
-	<div class="ginput_container"><input type="text" tabindex="5" value="<?php $metabox->the_value(); ?>" id="<?php $metabox->the_name(); ?>" name="<?php $metabox->the_name(); ?>"></div>
-	</li>
+    <label id="<?php $metabox->the_name(); ?>_label" for="<?php $metabox->the_name(); ?>">Zip Code</label>
+    <div class="ginput_container"><input type="text" tabindex="5" value="<?php $metabox->the_value(); ?>" id="<?php $metabox->the_name(); ?>" name="<?php $metabox->the_name(); ?>"></div>
+    </li>
+    <li>
+    <?php $metabox->the_field('phone'); ?>
+    <label id="<?php $metabox->the_name(); ?>_label" for="<?php $metabox->the_name(); ?>">Phone</label>
+    <div class="ginput_container"><input type="text" tabindex="6" value="<?php $metabox->the_value(); ?>" id="<?php $metabox->the_name(); ?>" name="<?php $metabox->the_name(); ?>"></div>
+    </li>
+    <li>
+    <?php $metabox->the_field('fax'); ?>
+    <label id="<?php $metabox->the_name(); ?>_label" for="<?php $metabox->the_name(); ?>">Fax</label>
+    <div class="ginput_container"><input type="text" tabindex="7" value="<?php $metabox->the_value(); ?>" id="<?php $metabox->the_name(); ?>" name="<?php $metabox->the_name(); ?>"></div>
+    </li>
+    <li>
+    <?php $metabox->the_field('email'); ?>
+    <label id="<?php $metabox->the_name(); ?>_label" for="<?php $metabox->the_name(); ?>">Email</label>
+    <div class="ginput_container"><input type="text" tabindex="8" value="<?php $metabox->the_value(); ?>" id="<?php $metabox->the_name(); ?>" name="<?php $metabox->the_name(); ?>"></div>
+    </li>
 <?php endwhile; ?>
 
 <?php
