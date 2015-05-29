@@ -1,20 +1,18 @@
 <?php
 /*
 Plugin Name: MSD Custom CPT
-Description: Custom plugin for MSDLAB
+Description: Custom plugin for GreyandPape.com
 Author: Catherine Sandrick
 Version: 0.0.1
 Author URI: http://msdlab.com
 */
 
 if(!class_exists('WPAlchemy_MetaBox')){
-    if(!include_once (WP_CONTENT_DIR.'/wpalchemy/MetaBox.php'))
-    include_once (plugin_dir_path(__FILE__).'/lib/wpalchemy/MetaBox.php');
+	include_once (plugin_dir_path(__FILE__).'/lib/wpalchemy/MetaBox.php');
 }
 global $wpalchemy_media_access;
 if(!class_exists('WPAlchemy_MediaAccess')){
-    if(!include_once (WP_CONTENT_DIR.'/wpalchemy/MediaAccess.php'))
-    include_once (plugin_dir_path(__FILE__).'/lib/wpalchemy/MediaAccess.php');
+	include_once (plugin_dir_path(__FILE__).'/lib/wpalchemy/MediaAccess.php');
 }
 $wpalchemy_media_access = new WPAlchemy_MediaAccess();
 global $msd_custom;
@@ -88,7 +86,7 @@ if (!class_exists('MSDCustomCPT')) {
         /**
         * PHP 4 Compatible Constructor
         */
-        function MSDCustomCPT(){$this->__construct();}
+        function MSDLawfirmCPT(){$this->__construct();}
         
         /**
         * PHP 5 Constructor
@@ -103,8 +101,12 @@ if (!class_exists('MSDCustomCPT')) {
         	register_activation_hook(__FILE__, array(&$this,'check_requirements'));
         	//get sub-packages
         	requireDir(plugin_dir_path(__FILE__).'/lib/inc');
-            //here are some examples to get started with
-            if(class_exists('MSDLocationCPT')){
+            /*if(class_exists('MSDNewsCPT')){
+                $this->news_class = new MSDNewsCPT();
+                register_activation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
+                register_deactivation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
+            }
+            /*if(class_exists('MSDLocationCPT')){
                 $this->location_class = new MSDLocationCPT();
                 register_activation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
                 register_deactivation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
@@ -113,6 +115,14 @@ if (!class_exists('MSDCustomCPT')) {
                 $this->project_class = new MSDProjectCPT();
                 register_activation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
                 register_deactivation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
+            }*/
+            if(class_exists('MSDTeamCPT')){
+                $this->cpt_class = new MSDTeamCPT();
+                register_activation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
+                register_deactivation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
+            }
+            if(class_exists('MSDTeamCPTDisplay')){
+                $this->display_class = new MSDTeamCPTDisplay();
             }
         }
 
