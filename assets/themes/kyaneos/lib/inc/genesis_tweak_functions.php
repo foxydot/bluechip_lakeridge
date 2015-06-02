@@ -287,10 +287,17 @@ function msdlab_add_portfolio_prefix($content){
  * Customize Breadcrumb output
  */
 function msdlab_breadcrumb_args($args) {
+    $args['home'] = 'ICON';
     $args['labels']['prefix'] = ''; //marks the spot
-    $args['sep'] = ' > ';
+    $args['sep'] = ' / ';
     return $args;
 }
+
+add_filter ( 'genesis_home_crumb', 'msdlab_breadcrumb_home_link' );
+function msdlab_breadcrumb_home_link($crumb){
+    return preg_replace('/ICON/i','<i class="fa fa-home"></i>',$crumb);
+}
+
 function sp_post_info_filter($post_info) {
     $post_info = 'Posted [post_date]';
     return $post_info;
@@ -308,7 +315,7 @@ function msdlab_newer_link_text($content) {
         return $newerlink;
 }
 
-add_filter( 'genesis_attr_site-container', 'msdlab_background_site_container', 10);
+//add_filter( 'genesis_attr_site-container', 'msdlab_background_site_container', 10);
 function msdlab_background_site_container( $attributes ){
     $attributes['style'] .= 'background-image:url('.msdlab_get_thumbnail_url(null,'full').')';
     return $attributes;
@@ -548,7 +555,7 @@ class Description_Walker extends Walker_Nav_Menu
 function msdlab_do_social_footer(){
     global $msd_social;
     global $wp_filter;
-    //ts_var( $wp_filter['msdlab_title_area'] );
+    //ts_var( $wp_filter['genesis_after_endwhile'] );
     
     if(has_nav_menu('footer_menu')){$footer_menu .= wp_nav_menu( array( 'theme_location' => 'footer_menu','container_class' => 'menu genesis-nav-menu nav-footer','echo' => FALSE ) );}
     
@@ -701,3 +708,5 @@ if(!function_exists('msdlab_custom_hooks_management')){
         if(get_option('site_lockout')){print '<div style="width: 100%; position: fixed; top: 0; z-index: 100000; background-color: red; padding: 12px; color: white; font-weight: bold; font-size: 24px;text-align: center;">'.get_option('site_lockout').'</div>';}
     }
 }
+
+

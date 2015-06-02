@@ -71,24 +71,24 @@ if (!class_exists('MSDTeamCPT')) {
         function register_cpt_team_member() {
         
             $labels = array( 
-                'name' => _x( 'Team Members', 'team_member' ),
-                'singular_name' => _x( 'Team Member', 'team_member' ),
+                'name' => _x( 'Our Doctors', 'team_member' ),
+                'singular_name' => _x( 'Doctor', 'team_member' ),
                 'add_new' => _x( 'Add New', 'team_member' ),
-                'add_new_item' => _x( 'Add New Team Member', 'team_member' ),
-                'edit_item' => _x( 'Edit Team Member', 'team_member' ),
-                'new_item' => _x( 'New Team Member', 'team_member' ),
-                'view_item' => _x( 'View Team Member', 'team_member' ),
-                'search_items' => _x( 'Search Team Member', 'team_member' ),
+                'add_new_item' => _x( 'Add New Doctor', 'team_member' ),
+                'edit_item' => _x( 'Edit Doctor', 'team_member' ),
+                'new_item' => _x( 'New Doctor', 'team_member' ),
+                'view_item' => _x( 'View Doctor', 'team_member' ),
+                'search_items' => _x( 'Search Doctor', 'team_member' ),
                 'not_found' => _x( 'No team members found', 'team_member' ),
                 'not_found_in_trash' => _x( 'No team members found in Trash', 'team_member' ),
-                'parent_item_colon' => _x( 'Parent Team Member:', 'team_member' ),
-                'menu_name' => _x( 'Team Member', 'team_member' ),
+                'parent_item_colon' => _x( 'Parent Doctor:', 'team_member' ),
+                'menu_name' => _x( 'Doctor', 'team_member' ),
             );
         
             $args = array( 
                 'labels' => $labels,
                 'hierarchical' => false,
-                'description' => 'Team Member',
+                'description' => 'Our Doctors',
                 'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'custom-fields' ),
                 'taxonomies' => array( 'practice_area' ),
                 'public' => true,
@@ -102,7 +102,7 @@ if (!class_exists('MSDTeamCPT')) {
                 'has_archive' => false,
                 'query_var' => true,
                 'can_export' => true,
-                'rewrite' => array('slug'=>'team-members','with_front'=>false),
+                'rewrite' => array('slug'=>'doctors','with_front'=>false),
                 'capability_type' => 'post'
             );
         
@@ -156,7 +156,7 @@ if (!class_exists('MSDTeamCPT')) {
         function change_default_title( $title ){
             global $current_screen;
             if  ( $current_screen->post_type == $this->cpt ) {
-                return __('Team Member Name','team_member');
+                return __('Doctor Name','team_member');
             } else {
                 return $title;
             }

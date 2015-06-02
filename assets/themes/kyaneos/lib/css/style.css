@@ -5607,7 +5607,7 @@ td.visible-print {
   line-height: 1.625;
 }
 .fontawesome {
-  font-family: FontAwesome;
+  font-family: "FontAwesome";
 }
 /* Colors */
 /* Neutrals */
@@ -5615,8 +5615,8 @@ td.visible-print {
 /* Buttons */
 .button:hover,
 .button a:hover {
-  background-color: #0f6bae;
-  border-radius: 6px;
+  background-color: #f16528;
+  border-radius: 30px;
   padding: 6px 24px;
   font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
   font-weight: 400;
@@ -5630,7 +5630,8 @@ td.visible-print {
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: #0b4e7f;
+  width: 80%;
+  background-color: #d84b0e;
 }
 /* Clears */
 .msd-clearfix {
@@ -5831,8 +5832,8 @@ input[type="reset"],
 input[type="submit"],
 .button,
 .entry-content .button {
-  background-color: #0f6bae;
-  border-radius: 6px;
+  background-color: #f16528;
+  border-radius: 30px;
   padding: 6px 24px;
   font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
   font-weight: 400;
@@ -5846,6 +5847,7 @@ input[type="submit"],
   display: table;
   margin: 12px auto;
   text-decoration: none;
+  width: 80%;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
@@ -5858,8 +5860,8 @@ input:hover[type="reset"],
 input:hover[type="submit"],
 .button:hover,
 .entry-content .button:hover {
-  background-color: #0f6bae;
-  border-radius: 6px;
+  background-color: #f16528;
+  border-radius: 30px;
   padding: 6px 24px;
   font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
   font-weight: 400;
@@ -5873,7 +5875,8 @@ input:hover[type="submit"],
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: #0b4e7f;
+  width: 80%;
+  background-color: #d84b0e;
 }
 .entry-content .button:hover {
   color: #ffffff;
@@ -5925,9 +5928,8 @@ article {
 }
 .site-inner {
   clear: both;
-  padding-top: 40px;
-  padding-top: 4rem;
-  background: #f2f7fa;
+  padding-top: 20px;
+  padding-top: 2rem;
 }
 /* Column Widths and Positions
 --------------------------------------------- */
@@ -6051,7 +6053,7 @@ img.alignright,
   margin-bottom: 0;
   font-size: 1.2rem;
   background: none;
-  color: #0f6bae;
+  color: #7f7f7f;
 }
 .archive-description,
 .author-box {
@@ -6353,7 +6355,7 @@ Site Header
 }
 .site-header .widget-area .widget_nav_menu nav ul li a:after,
 .pre-header .widget-area .widget_nav_menu nav ul li a:after {
-  font-family: FontAwesome;
+  font-family: "FontAwesome";
   padding: 0 0.2rem 0 0.4rem;
 }
 .site-header .widget-area .widget_nav_menu nav ul li.register,
@@ -6399,7 +6401,7 @@ Site Header
 }
 .site-header .widget-area .search-form input[type="submit"],
 .pre-header .widget-area .search-form input[type="submit"] {
-  font-family: FontAwesome;
+  font-family: "FontAwesome";
   background: transparent;
   border: 0 none;
   clip: auto;
@@ -6576,7 +6578,7 @@ Site Navigation
   text-decoration: none;
 }
 .nav-primary li.menu-item.menu-item-has-children > a:after {
-  font-family: FontAwesome;
+  font-family: "FontAwesome";
   content: '\f0d7';
   color: #f16528;
   display: inline-block;
@@ -6730,7 +6732,7 @@ Site Navigation
   font-weight: 400;
 }
 .widget_advanced_menu .menu > li > ul.sub-menu li a:before {
-  font-family: FontAwesome;
+  font-family: "FontAwesome";
   content: '\f105';
   margin-right: 1em;
   color: #959595;
@@ -6825,6 +6827,7 @@ article.entry {
   color: #959595;
   line-height: 1.25;
   margin: 0;
+  text-align: center;
 }
 .entry-header .entry-subtitle {
   font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
@@ -6835,6 +6838,7 @@ article.entry {
   font-weight: 300;
   color: #0f6bae;
   line-height: 1.25;
+  text-align: center;
 }
 /* Pagination
 --------------------------------------------- */
@@ -7032,8 +7036,8 @@ Sidebars
   /*Text Widget with Click */
 }
 .sidebar .widget_text .textwidget .readmore {
-  background-color: #0f6bae;
-  border-radius: 6px;
+  background-color: #f16528;
+  border-radius: 30px;
   padding: 6px 24px;
   font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
   font-weight: 400;
@@ -7047,6 +7051,7 @@ Sidebars
   display: table;
   margin: 12px auto;
   text-decoration: none;
+  width: 80%;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
@@ -7149,7 +7154,7 @@ Footer Widgets
 .footer-widgets .connected-form input[type="button"],
 .footer-widgets .connected-form a.button {
   background-color: #0f6bae;
-  border-radius: 6px;
+  border-radius: 30px;
   padding: 6px 24px;
   font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
   font-weight: 400;
@@ -7163,6 +7168,7 @@ Footer Widgets
   display: table;
   margin: 12px auto;
   text-decoration: none;
+  width: 80%;
 }
 .footer-widgets .align-right {
   text-align: right;
@@ -7601,6 +7607,9 @@ Site Footer
 .pre-header .connected-social .social-media a.fa-rss:hover {
   color: #f37d2a;
 }
+.breadcrumb a.first-child {
+  font-family: "FontAwesome";
+}
 .page-title-area {
   position: relative;
   background-color: #0f6bae;
@@ -7630,11 +7639,6 @@ Site Footer
   color: #ffffff;
   margin-bottom: 0;
 }
-.content-sidebar-wrap {
-  margin: 20px 0;
-  padding: 20px 0;
-  background: #ffffff;
-}
 .site-footer .wrap {
   position: relative;
 }
@@ -7656,6 +7660,56 @@ Site Footer
   color: #0f6bae;
   font-size: 2em;
   line-height: 1;
+}
+#team-members {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+#team-members .team-member {
+  margin: 10px;
+  text-align: center;
+}
+#team-members .team-member .info {
+  margin: 20px 0 50px 0;
+}
+#team-members .team-member .info h4 {
+  font-size: 1.2rem;
+  color: #353535;
+  font-weight: 600;
+}
+#team-members .team-member .info h5 {
+  font-size: 1.2rem;
+  color: #f16528;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.single-team_member .headshot {
+  text-align: center;
+}
+.single-team_member .headshot .headshot-lg {
+  margin-bottom: 20px;
+}
+.single-team_member .headshot .entry-title {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #353535;
+}
+.single-team_member .headshot h4 {
+  font-size: 1.2rem;
+  color: #353535;
+  font-weight: 600;
+}
+.single-team_member .headshot h5 {
+  font-size: 1.2rem;
+  color: #f16528;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.single-team_member .entry-content .bio h4 {
+  font-size: 1.6rem;
+  color: #f16528;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 .nav-responsive ul,
 .nav-responsive li,

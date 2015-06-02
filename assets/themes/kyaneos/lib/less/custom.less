@@ -65,6 +65,12 @@
     }
   }
 }
+
+.breadcrumb{
+  a.first-child{
+    .fontawesome;
+  }
+}
 .page-title-area{
   .arrow-down(@blue);
   background-color: @blue;
@@ -75,11 +81,6 @@
       color: @white;
       margin-bottom: 0;
   }
-}
-.content-sidebar-wrap{
-  margin: 20px 0;
-  padding: 20px 0;
-  background: @white;
 }
 .site-footer{
   .wrap{
@@ -104,5 +105,57 @@
     }
   }
 }
-
-
+#team-members{
+  margin-left: -10px;
+  margin-right: -10px;
+  .team-member{
+    margin: 10px;
+    text-align: center;
+    .info{
+      margin: 20px 0 50px 0;
+      h4{
+        font-size: 1.2rem;
+        color: @dkgrey;
+        font-weight: 600;
+      }
+      h5{
+        font-size: 1.2rem;
+        color: @orange;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.single-team_member{
+  .headshot{
+      text-align: center;
+    .headshot-lg{
+      margin-bottom: 20px;
+    }
+    .entry-title{
+      font-weight: 700;
+      font-size: 2.4rem;
+      color: @dkgrey;
+    }
+    h4{
+        font-size: 1.2rem;
+        color: @dkgrey;
+        font-weight: 600;
+      }
+    h5{
+      font-size: 1.2rem;
+      color: @orange;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+  .entry-content .bio{
+    h4{
+      font-size: 1.6rem;
+      color: @orange;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -52,14 +52,14 @@ add_filter('widget_text', 'do_shortcode');//shortcodes in widgets
 add_filter('genesis_breadcrumb_args', 'msdlab_breadcrumb_args'); //customize the breadcrumb output
 remove_action('genesis_before_loop', 'genesis_do_breadcrumbs'); //move the breadcrumbs 
 add_filter( 'genesis_post_info', 'sp_post_info_filter' );
-add_action('template_redirect','msdlab_maybe_move_title');
+//add_action('template_redirect','msdlab_maybe_move_title');
 
     //remove_action('genesis_entry_header','genesis_do_post_title'); //move the title out of the content area
     //add_action('msdlab_title_area','msdlab_do_section_title');
     //add_action('genesis_after_header','msdlab_do_title_area');
 
 add_action('genesis_after_header', 'genesis_do_breadcrumbs'); //to outside of the loop area
-add_action('genesis_before_entry','msd_post_image');//add the image above the entry
+//add_action('genesis_before_entry','msd_post_image');//add the image above the entry
 //add_action('genesis_entry_header','msdlab_project_gallery',-5);//add the image above the entry
 
 add_filter('excerpt_more', 'sp_read_more_link');
@@ -74,12 +74,12 @@ remove_action( 'genesis_entry_footer', 'genesis_post_meta'); //remove the meta (
 //add_action( 'genesis_entry_header', 'msdlab_project_header_info' );
 //add_action( 'genesis_entry_footer', 'msdlab_project_footer_info' );
 
-add_action( 'genesis_before_post', 'msdlab_post_image', 8 ); //add feature image across top of content on *pages*.
+//add_action( 'genesis_before_post', 'msdlab_post_image', 8 ); //add feature image across top of content on *pages*.
 //add_filter( 'genesis_next_link_text', 'msdlab_older_link_text', 20);
 //add_filter( 'genesis_prev_link_text', 'msdlab_newer_link_text', 20);
 
 remove_action( 'genesis_after_endwhile', 'genesis_prev_next_post_nav' );
-add_action( 'genesis_after_endwhile', 'msdlab_prev_next_post_nav' );
+//add_action( 'genesis_after_endwhile', 'msdlab_prev_next_post_nav' );
 /*** FOOTER ***/
 add_theme_support( 'genesis-footer-widgets', 1 ); //adds automatic footer widgets
 //add the menu

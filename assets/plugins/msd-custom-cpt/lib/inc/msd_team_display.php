@@ -101,17 +101,18 @@ if (!class_exists('MSDTeamDisplay')) {
                 $team_contact_info .= '<li class="email"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span> '.msd_str_fmt($contact_info->get_the_value(),'email').'</li>';
             }
             $teamstr = '
-            <a class="team-member '.$practice_areas.' '.$team->post_name.'" href="'.get_post_permalink($team->ID).'">
+            <div class="team-member '.$practice_areas.' '.$team->post_name.'">
                 <div class="headshot">
                     '.$headshot.'
                 </div>
                 <div class="info">
                     <h4>'.$team->post_title.'</h4>
-                    <h5>'.$jobtitle_metabox->get_the_value('jobtitle').'</h5>
+                    <h5>'.$primary_practice_area->get_the_value('primary_practice_area').'</h5>
+                    <a class="button" href="'.get_post_permalink($team->ID).'">More ></a>
                     ';
             $teamstr .= '
                 </div>
-            </a>';
+            </div>';
             return $teamstr;
     }   
         
@@ -158,9 +159,16 @@ if (!class_exists('MSDTeamDisplay')) {
          * @return array $attributes The element attributes
          */
         function msdlab_headshot_context_filter( $attributes ){
-                $attributes['class'] .= ' alignleft';
+                $attributes['class'] .= ' col-md-4 col-xs-12';
                 // return the attributes
                 return $attributes;
+        }
+        
+        function msd_team_member_info(){
+            global $post,$primary_practice_area;
+            $primary_practice_area->the_meta($post->ID);
+            print '<h5>'.$primary_practice_area->get_the_value('primary_practice_area').'</h5>
+                    <a class="button" href="/contact-us">Contact Us ></a>';
         }
         
         function msd_team_member_contact_info(){

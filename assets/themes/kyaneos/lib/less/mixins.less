@@ -35,7 +35,7 @@
 }
 
 .fontawesome {
-  font-family: FontAwesome;
+  font-family: "FontAwesome";
 }
 
 
@@ -204,9 +204,9 @@
 
 
 /* Buttons */
-.button(@color:@blue) {
+.button(@color:@orange) {
   background-color: @color;
-  border-radius: 6px;
+  border-radius: 30px;
   padding: 6px 24px;
   .customsanserif;
   color: #FFFFFF;
@@ -216,10 +216,11 @@
   display: table;
   margin: 12px auto;
   text-decoration: none;
+  width: 80%;
 }
 
 
-.button-hover(@color:@blue) {
+.button-hover(@color:@orange) {
   .button(@color);
   background-color: darken(@color,10%);
 }
