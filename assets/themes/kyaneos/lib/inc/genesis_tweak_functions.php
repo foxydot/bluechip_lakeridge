@@ -4,7 +4,7 @@
  */
 function msdlab_make_it_homepage(){
     if(is_front_page()){
-        remove_action('genesis_entry_header', 'genesis_do_post_title');
+        //remove_action('genesis_entry_header', 'genesis_do_post_title');
         add_action('genesis_after_header','msdlab_hero');
         remove_action('genesis_before_footer','genesis_footer_widget_areas');
         add_action('genesis_before_footer','msdlab_homepage_widgets',-4);

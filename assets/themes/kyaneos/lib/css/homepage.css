@@ -45,9 +45,6 @@
   clear: both;
   visibility: hidden;
 }
-.site-inner {
-  display: none;
-}
 .sectioned-page-wrapper .section {
   text-align: center;
 }

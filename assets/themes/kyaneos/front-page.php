@@ -6,7 +6,7 @@ Template Name: Front Page
 //remove sidebars (jsut in case)
 //remove_all_actions('genesis_sidebar');
 //remove_all_actions('genesis_sidebar_alt');
-remove_action('genesis_entry_header', 'genesis_do_post_title');
+//remove_action('genesis_entry_header', 'genesis_do_post_title');
 
 /**
  * hero + 3 widgets
