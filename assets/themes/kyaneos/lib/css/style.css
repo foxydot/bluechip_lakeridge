@@ -8382,15 +8382,19 @@ Site Footer
   font-weight: 600;
   margin-bottom: 0;
 }
-.msd-fa.block {
+.msd-fa.block,
+.msd-icon.block {
   display: block;
 }
-.msd-fa.block:before {
+.msd-fa.block:before,
+.msd-icon.block:before {
   margin: 0 auto;
   display: block;
 }
 .msd-fa.circle:before,
-.msd-fa.square:before {
+.msd-icon.circle:before,
+.msd-fa.square:before,
+.msd-icon.square:before {
   background: #0f6bae;
   color: #ffffff;
   height: 2.4em;
@@ -8398,7 +8402,8 @@ Site Footer
   text-align: center;
   padding: 0.7em 0;
 }
-.msd-fa.circle:before {
+.msd-fa.circle:before,
+.msd-icon.circle:before {
   border-radius: 50%;
 }
 .nav-responsive ul,
