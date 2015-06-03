@@ -88,3 +88,20 @@ function msdlab_fontawesome_shortcodes($atts){
     }
     return '<i class="'.implode(" ",$classes).'"></i>';
 }
+add_shortcode('icon','msdlab_icon_shortcodes');
+function msdlab_icon_shortcodes($atts){
+    $classes[] = 'msd-icon icon';
+    foreach($atts AS $att){
+        switch($att){
+            case "circle":
+            case "square":
+            case "block":
+                $classes[] = $att;
+                break;
+            default:
+                $classes[] = 'icon-'.$att;
+                break;
+        }
+    }
+    return '<i class="'.implode(" ",$classes).'"></i>';
+}
