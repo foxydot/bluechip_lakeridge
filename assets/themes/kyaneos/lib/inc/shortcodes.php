@@ -70,3 +70,20 @@ function msdlab_mailto_function($atts, $content){
 add_shortcode('columns','column_shortcode');
 
 add_shortcode('sitemap','msdlab_sitemap');
+
+add_shortcode('fa','msdlab_fontawesome_shortcodes');
+function msdlab_fontawesome_shortcodes($atts){
+    $classes[] = 'fa';
+    foreach($atts AS $att){
+        switch($att){
+            case "circle":
+            case "square":
+                $classes[] = $att;
+                break;
+            default:
+                $classes[] = 'fa-'.$att;
+                break;
+        }
+    }
+    return '<i class="'.implode(" ",$classes).'"></i>';
+}
