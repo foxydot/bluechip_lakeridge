@@ -73,11 +73,12 @@ add_shortcode('sitemap','msdlab_sitemap');
 
 add_shortcode('fa','msdlab_fontawesome_shortcodes');
 function msdlab_fontawesome_shortcodes($atts){
-    $classes[] = 'fa';
+    $classes[] = 'msd-fa fa';
     foreach($atts AS $att){
         switch($att){
             case "circle":
             case "square":
+            case "block":
                 $classes[] = $att;
                 break;
             default:

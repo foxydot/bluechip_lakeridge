@@ -159,3 +159,27 @@
     }
   }
 }
+.msd-fa{
+  &.block{
+    display: block;
+    &:before{
+    margin: 0 auto;
+      display: block;
+    }
+  }
+  &.circle, &.square{
+    &:before{
+      background: @blue;
+      color: @white;
+      height: 2.4em;
+      width: 2.4em;
+      text-align: center;
+      padding: 0.7em 0;
+    }
+  }
+  &.circle{
+    &:before{
+      border-radius: 50%;
+    }
+  }
+}
