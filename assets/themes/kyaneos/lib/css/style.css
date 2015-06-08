@@ -8442,13 +8442,6 @@ Site Footer
     margin: 0 auto;
     float: none;
   }
-}
-/* Mobile */
-@media only screen and (max-width: 767px) {
-  /* Enter Your Custom Styles Here */
-  .mobile-only {
-    display: block;
-  }
   .nav-primary {
     float: none;
     display: block;
@@ -8553,6 +8546,13 @@ Site Footer
     position: absolute;
     right: 15px;
     top: 10px;
+  }
+}
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  /* Enter Your Custom Styles Here */
+  .mobile-only {
+    display: block;
   }
 }
 @media only screen and (max-width: 479px) {
