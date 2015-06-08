@@ -664,6 +664,16 @@ function msdlab_do_cpt_archive_title_description() {
 }
 
 
+
+add_filter( 'gform_pre_render', 'msdlab_gravity_form_shortcode_handler' );
+function msdlab_gravity_form_shortcode_handler($form){
+    foreach($form['fields'] AS $key => $field){
+        //ts_data(do_shortcode($field->label));
+        $form['fields'][$key]->label = do_shortcode($field->label);
+    }
+    return $form;
+}
+
 if(!function_exists('msdlab_custom_hooks_management')){
     function msdlab_custom_hooks_management() {
         $actions = false;

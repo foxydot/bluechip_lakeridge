@@ -63,10 +63,32 @@ div.gform_wrapper form li {
   margin: 1.6rem 0 0;
 }
 
+div.gform_wrapper .gform_body .gfield{
+  padding: 0.5em;
+  &.even{background-color: @offwhite;}
+  &.odd{}
+  .ginput_container{
+    .gfield_radio{
+      li{
+        display: inline-block;
+        min-width: 16%;
+        input,label{
+          text-align: center;
+          display: block;
+          margin: 1px auto;
+          float: none;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
 div.gform_wrapper .gform_footer input[type="submit"] {
   font-size: 14px;
   font-size: 1.4rem;
 }
+
 /* Jetpack
 --------------------------------------------- */
 

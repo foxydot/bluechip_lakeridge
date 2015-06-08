@@ -71,6 +71,12 @@ add_shortcode('columns','column_shortcode');
 
 add_shortcode('sitemap','msdlab_sitemap');
 
+add_shortcode('sitename','msdlab_sitename');
+
+function msdlab_sitename(){
+    return get_option('blogname');
+}
+
 add_shortcode('fa','msdlab_fontawesome_shortcodes');
 function msdlab_fontawesome_shortcodes($atts){
     $classes[] = 'msd-fa fa';
