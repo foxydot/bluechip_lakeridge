@@ -107,6 +107,7 @@ if (!class_exists('MSDTeamDisplay')) {
                 </div>
                 <div class="info">
                     <h4>'.$team->post_title.'</h4>
+                    <h5>'.$jobtitle_metabox->get_the_value('jobtitle').'</h5>
                     <h5>'.$primary_practice_area->get_the_value('primary_practice_area').'</h5>
                     <a class="button" href="'.get_post_permalink($team->ID).'">More ></a>
                     ';
@@ -165,9 +166,10 @@ if (!class_exists('MSDTeamDisplay')) {
         }
         
         function msd_team_member_info(){
-            global $post,$primary_practice_area;
+            global $post,$primary_practice_area,$jobtitle_metabox;
             $primary_practice_area->the_meta($post->ID);
-            print '<h5>'.$primary_practice_area->get_the_value('primary_practice_area').'</h5>
+            print '<h5>'.$jobtitle_metabox->get_the_value('jobtitle').'</h5>
+            <h5>'.$primary_practice_area->get_the_value('primary_practice_area').'</h5>
                     <a class="button" href="/contact-us">Contact Us ></a>';
         }
         
