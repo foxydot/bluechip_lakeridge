@@ -6922,6 +6922,21 @@ div.gform_wrapper .gform_footer input[type="submit"] {
 img#wpstats {
   display: none;
 }
+.gfield table.gsurvey-likert {
+  border: 0;
+}
+.gfield table.gsurvey-likert tbody {
+  border: 0;
+}
+.gfield table.gsurvey-likert tbody tr {
+  border: 0;
+}
+.gfield table.gsurvey-likert tbody tr td {
+  border: 0;
+}
+.gfield table.gsurvey-likert tbody tr td.gsurvey-likert-choice-label {
+  background: none;
+}
 /* Pre Header */
 .pre-header {
   background: #f2f7fa;
