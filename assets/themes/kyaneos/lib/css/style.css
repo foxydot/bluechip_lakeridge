@@ -7346,7 +7346,6 @@ Site Navigation
 --------------------------------------------- */
 .nav-footer {
   padding: 0.5rem 0;
-  color: #ffffff;
   font-size: 1rem;
 }
 .nav-footer li.menu-item {
@@ -7355,36 +7354,9 @@ Site Navigation
 }
 .nav-footer li.menu-item > a {
   padding: 0 1rem;
-  color: #ffffff;
-}
-.nav-footer li.menu-item > a:hover {
-  color: #b7b7b7;
-}
-.nav-footer li.menu-item ul {
-  display: none;
-  position: absolute;
-  background: #959595;
-  text-align: center;
-  left: 20px;
-  z-index: 500;
-}
-.nav-footer li.menu-item ul li {
-  border: 0;
-  display: block;
-  width: auto;
-}
-.nav-footer li.menu-item ul li a {
-  border: 0;
-  color: #353535;
-  width: auto;
-  padding: 0 0 0 20px;
-  background-position: left center;
 }
 .nav-footer li.menu-item.last-child {
   border: 0;
-}
-.nav-footer li:hover ul {
-  display: block;
 }
 .widget_advanced_menu .menu > li i {
   margin-right: 1em;
@@ -7958,11 +7930,33 @@ Site Footer
   text-align: center;
   padding: 2rem;
 }
-.site-footer p {
+.site-footer .wrap {
+  position: relative;
+}
+.site-footer .wrap .social,
+.site-footer .wrap .footer-menu {
+  display: block;
+}
+.site-footer .wrap p {
   margin-bottom: 0;
 }
-.site-footer a {
-  color: #ffffff;
+.site-footer .wrap a {
+  color: #7f7f7f;
+}
+.site-footer .wrap .backtotop {
+  position: absolute;
+  right: 0;
+  top: -2px;
+  background-color: #ffffff;
+  border-radius: 0 0 20% 20%;
+  height: 2.4rem;
+  width: 2.4rem;
+  text-align: center;
+}
+.site-footer .wrap .backtotop a {
+  color: #0f6bae;
+  font-size: 2em;
+  line-height: 1;
 }
 .page-template-page-sectioned .site-container {
   background: #f2f7fa;
@@ -8326,28 +8320,6 @@ Site Footer
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 0;
-}
-.site-footer .wrap {
-  position: relative;
-}
-.site-footer .wrap .social,
-.site-footer .wrap .footer-menu {
-  display: inline-block;
-}
-.site-footer .wrap .backtotop {
-  position: absolute;
-  right: 0;
-  top: -2px;
-  background-color: #ffffff;
-  border-radius: 0 0 20% 20%;
-  height: 2.4rem;
-  width: 2.4rem;
-  text-align: center;
-}
-.site-footer .wrap .backtotop a {
-  color: #0f6bae;
-  font-size: 2em;
-  line-height: 1;
 }
 #team-members {
   margin-left: -10px;
