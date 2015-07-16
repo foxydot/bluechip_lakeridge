@@ -4,7 +4,7 @@ HTML5 Reset
 /* Baseline Normalize
   normalize.css v2.1.2 | MIT License | git.io/normalize
 --------------------------------------------- */
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700);
+@import url(//fonts.googleapis.com/css?family=Raleway:400,300,700);
 article,
 aside,
 details,
@@ -8337,8 +8337,8 @@ Site Footer
   margin-bottom: 0;
 }
 #team-members {
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-left: -11px;
+  margin-right: -11px;
 }
 #team-members .team-member {
   margin: 10px;
