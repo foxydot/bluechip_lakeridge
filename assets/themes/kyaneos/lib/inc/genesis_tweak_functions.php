@@ -217,6 +217,13 @@ function msdlab_do_blog_sidebar(){
         dynamic_sidebar('blog');
     }
 }
+
+function msdlab_make_excerpt(){
+    if((get_post_type() == 'post' && is_archive()) || is_home()){
+        remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
+        add_action( 'genesis_entry_content', 'genesis_do_post_excerpt' );
+    }
+}
 /**
  * Reversed out style SCS
  * This ensures that the primary sidebar is always to the left.
