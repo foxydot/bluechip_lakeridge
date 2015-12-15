@@ -1,5 +1,15 @@
 <?php
 /**
+ * Force sidebar on blog area
+ */
+add_filter( 'genesis_pre_get_option_site_layout', 'msdlab_force_blog_layout', 5 );
+function msdlab_force_blog_layout( $opt ) {
+    if(is_cpt('post')){
+       $opt = 'content-sidebar'; // You can change this to any Genesis layout
+    }
+    return $opt;
+}
+/**
  * Make a homepage with the section plugin
  */
 function msdlab_make_it_homepage(){

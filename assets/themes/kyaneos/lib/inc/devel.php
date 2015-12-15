@@ -23,6 +23,6 @@ if(!function_exists('ts_var')){
 //add_action('genesis_footer','msdlab_trace_actions');
 function msdlab_trace_actions(){
     global $wp_filter;
-    ts_var( $wp_filter['genesis_entry_content'] );
-    //ts_data(get_post_type());
+    //ts_var( $wp_filter['genesis_pre_get_option_site_layout'] );
+    ts_data(genesis_site_layout());
 }
