@@ -7242,7 +7242,7 @@ Site Navigation
   padding: 0;
 }
 .nav-primary li.menu-item a {
-  padding: 1rem 2.2rem;
+  padding: 1rem 2rem;
   color: #F2F7FA;
   border-bottom: 6px solid transparent;
   text-transform: uppercase;
@@ -7432,6 +7432,26 @@ article.entry {
   padding-bottom: 20px;
   padding-bottom: 2rem;
   border-bottom: 1px solid #959595;
+}
+article.entry:before,
+article.entry:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+article.entry:after {
+  clear: both;
+}
+article.entry:before,
+article.entry:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+article.entry:after {
+  clear: both;
 }
 .entry-content h3 {
   color: #353535;
